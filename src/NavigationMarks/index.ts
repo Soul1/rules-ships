@@ -1,0 +1,1 @@
+export {NavigationMarks} from './components/Main'

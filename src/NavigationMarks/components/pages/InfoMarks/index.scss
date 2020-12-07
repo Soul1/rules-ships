@@ -1,0 +1,18 @@
+.info-marks {
+  &, .title, .subtitle {
+    color: #fff;
+  }
+  .subtitle {
+    margin-bottom: 10px;
+  }
+  .text {
+    max-width: 650px;
+    width: 100%;
+    font-size: 14px;
+  }
+  .info {
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #48c774;
+  }
+}

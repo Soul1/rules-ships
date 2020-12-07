@@ -1,0 +1,611 @@
+$yellow: #ff0;
+$blue: #00f;
+
+@mixin beginOrEnd {
+  opacity: 0;
+  background-size: 0;
+}
+
+@mixin start {
+  width: 5px;
+  height: 5px;
+  @include beginOrEnd;
+}
+
+@mixin middle {
+  opacity: .5;
+  background-size: 100%;
+}
+
+@mixin finish {
+  opacity: 1;
+  width: 12.5px;
+  height: 12.5px;
+  background-size: 100%;
+}
+
+@keyframes lateralSigns {
+  0% {
+    @include start;
+  }
+  20% {
+    @include middle;
+  }
+  40% {
+    @include finish;
+  }
+  40.01% {
+    @include beginOrEnd;
+  }
+  100% {
+    @include beginOrEnd;
+  }
+}
+
+@keyframes special {
+  0% {
+    @include start;
+  }
+  5% {
+    @include middle;
+  }
+  10% {
+    @include finish;
+  }
+  10.01% {
+    @include start;
+  }
+  20% {
+    @include beginOrEnd;
+  }
+  25% {
+    @include middle;
+  }
+  30% {
+    @include finish;
+  }
+  30.01% {
+    @include start;
+  }
+  40% {
+    @include beginOrEnd;
+  }
+  45% {
+    @include middle;
+  }
+  50% {
+    @include finish;
+  }
+  50.01% {
+    @include start;
+  }
+  60% {
+    @include beginOrEnd;
+  }
+  65% {
+    @include middle;
+  }
+  70% {
+    @include finish;
+  }
+  70.01% {
+    @include start;
+  }
+  80% {
+    @include beginOrEnd;
+  }
+  100% {
+    @include beginOrEnd;
+  }
+}
+
+@keyframes emergencyWreckMarking {
+  0% {
+    @include start;
+    background-color: $blue;
+  }
+  15% {
+    @include middle;
+  }
+  35% {
+    @include finish;
+    background-color: $blue;
+  }
+  35.01% {
+    @include start;
+  }
+  45% {
+    @include beginOrEnd;
+    box-shadow: 0 0 35px 20px $blue;
+  }
+  50% {
+    @include start;
+    box-shadow: 0 0 35px 20px $yellow;
+    background-color: $yellow;
+  }
+  60% {
+    @include middle;
+    box-shadow: 0 0 35px 20px $yellow;
+  }
+  85% {
+    @include finish;
+    box-shadow: 0 0 35px 20px $yellow;
+  }
+  85.01% {
+    @include beginOrEnd;
+    background-color: $yellow;
+  }
+  100% {
+    @include beginOrEnd;
+  }
+}
+
+@keyframes saveWater {
+  0% {
+    @include start;
+  }
+  15% {
+    @include middle;
+  }
+  25% {
+    @include finish;
+  }
+  25.01% {
+    @include start;
+  }
+  35% {
+    @include beginOrEnd;
+  }
+  45% {
+    @include start;
+  }
+  50% {
+    @include middle;
+  }
+  60% {
+    @include finish;
+  }
+  85% {
+    @include finish;
+  }
+  85.01% {
+    @include beginOrEnd;
+  }
+  100% {
+    @include beginOrEnd;
+  }
+}
+
+@keyframes isolatedDanger {
+  0% {
+    @include start;
+  }
+  15% {
+    @include middle;
+  }
+  25% {
+    @include finish;
+  }
+  25.01% {
+    @include start;
+  }
+  35% {
+    @include beginOrEnd;
+  }
+  45% {
+    @include start;
+  }
+  50% {
+    @include middle;
+  }
+  65% {
+    @include finish;
+  }
+  65.01% {
+    @include beginOrEnd;
+  }
+  100% {
+    @include beginOrEnd;
+  }
+}
+
+@keyframes northCardinal {
+  0% {
+    @include start;
+  }
+  50% {
+    @include middle;
+  }
+  75% {
+    @include finish;
+  }
+  75.01% {
+    @include start;
+  }
+  100% {
+    @include beginOrEnd;
+  }
+}
+
+@keyframes eastCardinal {
+  0% {
+    @include start;
+  }
+  10% {
+    @include middle;
+  }
+  20% {
+    @include finish;
+  }
+  20.01% {
+    @include start;
+  }
+  25% {
+    @include beginOrEnd;
+  }
+  35% {
+    @include middle;
+  }
+  45% {
+    @include finish;
+  }
+  45.01% {
+    @include start;
+  }
+  50% {
+    @include beginOrEnd;
+  }
+  60% {
+    @include middle;
+  }
+  70% {
+    @include finish;
+  }
+  70.01% {
+    @include beginOrEnd;
+  }
+  85.01% {
+    @include beginOrEnd;
+  }
+  100% {
+    @include beginOrEnd;
+  }
+}
+
+@keyframes southCardinal {
+  //1
+  0% {
+    @include start;
+  }
+  4.25% {
+    @include middle;
+  }
+  8.5% {
+    @include finish;
+  }
+  8.51% {
+    @include start;
+  }
+  //2
+  12.75% {
+    @include beginOrEnd;
+  }
+  17% {
+    @include middle;
+  }
+  21.25% {
+    @include finish;
+  }
+  21.251% {
+    @include start;
+  }
+  //3
+  25.5% {
+    @include beginOrEnd;
+  }
+  29.75% {
+    @include middle;
+  }
+  34% {
+    @include finish;
+  }
+  34.01% {
+    @include start;
+  }
+  //4
+  38.25% {
+    @include beginOrEnd;
+  }
+  42.5% {
+    @include middle;
+  }
+  46.75% {
+    @include finish;
+  }
+  46.751% {
+    @include start;
+  }
+  //5
+  51% {
+    @include beginOrEnd;
+  }
+  55.25% {
+    @include middle;
+  }
+  59.5% {
+    @include finish;
+  }
+  59.51% {
+    @include start;
+  }
+  //6
+  63.75% {
+    @include beginOrEnd;
+  }
+  68% {
+    @include middle;
+  }
+  72.25% {
+    @include finish;
+  }
+  72.251% {
+    @include start;
+  }
+  //l fl
+  76.5% {
+    @include beginOrEnd;
+  }
+  85% {
+    @include finish;
+  }
+  93.5% {
+    @include finish;
+  }
+  93.51% {
+    @include start;
+  }
+  95% {
+    @include beginOrEnd;
+  }
+  100% {
+    @include beginOrEnd;
+  }
+}
+
+@keyframes westCardinal {
+  //1
+  0% {
+    @include start;
+  }
+  2.5% {
+    @include middle;
+  }
+  5% {
+    @include finish;
+  }
+  5.01% {
+    @include start;
+  }
+  //2
+  7.5% {
+    @include beginOrEnd;
+  }
+  10% {
+    @include start;
+  }
+  12.5% {
+    @include middle;
+  }
+  15% {
+    @include finish;
+  }
+  15.01% {
+    @include start;
+  }
+  //3
+  17.5% {
+    @include beginOrEnd;
+  }
+  20% {
+    @include start;
+  }
+  22.5% {
+    @include middle;
+  }
+  25% {
+    @include finish;
+  }
+  25.01% {
+    @include start;
+  }
+  27.5% {
+    @include beginOrEnd;
+  }
+  //4
+  30% {
+    @include start;
+  }
+  32.5% {
+    @include middle;
+  }
+  35% {
+    @include finish;
+  }
+  35.01% {
+    @include start;
+  }
+  37.5% {
+    @include beginOrEnd;
+  }
+  //5
+  40% {
+    @include start;
+  }
+  42.5% {
+    @include middle;
+  }
+  45% {
+    @include finish;
+  }
+  45.01% {
+    @include start;
+  }
+  47.5% {
+    @include beginOrEnd;
+  }
+  //6
+  50% {
+    @include start;
+  }
+  52.5% {
+    @include middle;
+  }
+  55% {
+    @include finish;
+  }
+  55.01% {
+    @include start;
+  }
+  57.5% {
+    @include beginOrEnd;
+  }
+  //7
+  60% {
+    @include start;
+  }
+  62.5% {
+    @include middle;
+  }
+  65% {
+    @include finish;
+  }
+  65.01% {
+    @include start;
+  }
+  67.5% {
+    @include beginOrEnd;
+  }
+  //8
+  70% {
+    @include start;
+  }
+  72.5% {
+    @include middle;
+  }
+  75% {
+    @include finish;
+  }
+  75.01% {
+    @include start;
+  }
+  77.5% {
+    @include beginOrEnd;
+  }
+  //9
+  80% {
+    @include start;
+  }
+  82.5% {
+    @include middle;
+  }
+  85% {
+    @include finish;
+  }
+  85.01% {
+    @include start;
+  }
+  87.5% {
+    @include beginOrEnd;
+  }
+  100% {
+    @include beginOrEnd;
+  }
+}
+
+@keyframes animateMark {
+  0% {
+    top: 50px;
+    left: 50px;
+  }
+  40% {
+    top: 40px;
+    left: 52px;
+  }
+  60% {
+    top: 50px;
+    left: 49px;
+  }
+  80% {
+    top: 60px;
+    left: 51px;
+  }
+}
+
+// по 50% на каждую сторону
+@keyframes ship {
+  0% {
+    bottom: 0;
+    left: 200px;
+    transform: rotate(0deg);
+  }
+  10% {
+    bottom: 50px;
+    left: 190px;
+    transform: rotate(-15deg);
+  }
+  20% {
+    bottom: 100px;
+    left: 190px;
+    transform: rotate(-5deg);
+  }
+  30% {
+    bottom: 150px;
+    left: 210px;
+    transform: rotate(0deg);
+  }
+  40% {
+    bottom: 200px;
+    left: 210px;
+    transform: rotate(15deg);
+  }
+  50% {
+    bottom: 220px;
+    left: 200px;
+    transform: rotate(90deg);
+  }
+  57% {
+    bottom: 220px;
+    left: 545px;
+    transform: rotate(150deg);
+  }
+  60% {
+    bottom: 220px;
+    left: 550px;
+    transform: rotate(180deg);
+  }
+  70% {
+    bottom: 200px;
+    left: 560px;
+    transform: rotate(180deg);
+  }
+  80% {
+    bottom: 100px;
+    left: 550px;
+    transform: rotate(180deg);
+  }
+  85% {
+    bottom: 0;
+    left: 520px;
+    transform: rotate(220deg);
+  }
+  90% {
+    bottom: 0;
+    left: 520px;
+    transform: rotate(270deg);
+  }
+  100% {
+    bottom: 0;
+    left: 200px;
+    transform: rotate(320deg);
+  }
+}
