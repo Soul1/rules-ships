@@ -1,0 +1,1 @@
+export {LightsSings} from './components/Main'
