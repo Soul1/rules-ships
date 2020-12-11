@@ -2,6 +2,7 @@ import {h, Fragment} from 'preact'
 import {useState} from 'preact/hooks'
 import cn from 'classnames'
 import {NavigationMarks} from './NavigationMarks'
+import {LightsSings} from './LightsSigns'
 import * as Type from './types'
 import './index.scss'
 
@@ -11,7 +12,6 @@ const menu: Type.Menu[] = [
   {id: 3, title: 'Огни и знаки', page: 'LightsSigns'},
   {id: 4, title: 'Звуки сигналов', page: 'SoundSignals'}
 ]
-
 
 export const App = () => {
   const [currentPage, setCurrentPage] = useState('Main')
@@ -25,7 +25,7 @@ export const App = () => {
         return <NavigationMarks/>
       }
       case 'LightsSigns': {
-        return <div>Пока не готово</div>
+        return <LightsSings/>
       }
       case 'SoundSignals': {
         return <div>Пока не готово</div>
@@ -72,7 +72,12 @@ const Menu: Type.F<MenuProps> = ({menu, onCurrentPage}) => {
   )
 }
 
-const BurgMenu = ({isActive, onIsActive}) =>
+type BurgProps = {
+  isActive: boolean
+  onIsActive: (isActive: boolean) => void
+}
+
+const BurgMenu: Type.F<BurgProps> = ({isActive, onIsActive}) =>
   <svg class={cn('ham hamRotate', {'active': isActive})} viewBox='0 0 100 100' width='50' onClick={() => onIsActive(!isActive)}>
     <path
       class='line top'

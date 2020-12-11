@@ -1,6 +1,7 @@
 .menu {
   position: absolute;
   right: 0;
+  z-index: 2;
   background-color: rgba(255, 255, 255, 0.9);
   max-width: 25vw;
   width: 100%;
@@ -19,7 +20,7 @@
 .ham {
   position: absolute;
   right: 0;
-  z-index: 2;
+  z-index: 4;
   display: block;
   cursor: pointer;
   transition: transform 400ms;
