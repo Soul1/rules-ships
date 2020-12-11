@@ -17,14 +17,82 @@ const ships: Type.Ship[] = [
   }
 ]
 
+const icons: Type.Icon[] = [
+  {
+    "id": 1,
+    "img": "https://visualpharm.com/assets/294/Battleship-595b40b75ba036ed117d558f.svg",
+    "text": "Парусные судна"
+  },
+  {
+    "id": 2,
+    "img": "https://visualpharm.com/assets/294/Battleship-595b40b75ba036ed117d558f.svg",
+    "text": "Парусные судна под мотором"
+  },
+  {
+    "id": 3,
+    "img": "https://visualpharm.com/assets/294/Battleship-595b40b75ba036ed117d558f.svg",
+    "text": "Моторное судно длиною менее 50 м"
+  },
+  {
+    "id": 4,
+    "img": "https://visualpharm.com/assets/294/Battleship-595b40b75ba036ed117d558f.svg",
+    "text": "Судно, стесненное своей осадкой"
+  },
+  {
+    "id": 5,
+    "img": "https://visualpharm.com/assets/294/Battleship-595b40b75ba036ed117d558f.svg",
+    "text": "Минный тральщик"
+  },
+  {
+    "id": 6,
+    "img": "https://visualpharm.com/assets/294/Battleship-595b40b75ba036ed117d558f.svg",
+    "text": "Рыболовное-судно траулер"
+  },
+  {
+    "id": 7,
+    "img": "https://visualpharm.com/assets/294/Battleship-595b40b75ba036ed117d558f.svg",
+    "text": "Судно, ограниченное в возможности маневрировать"
+  },
+  {
+    "id": 8,
+    "img": "https://visualpharm.com/assets/294/Battleship-595b40b75ba036ed117d558f.svg",
+    "text": "Судно, занятное дноуглубительными или подводными работами"
+  },
+  {
+    "id": 9,
+    "img": "https://visualpharm.com/assets/294/Battleship-595b40b75ba036ed117d558f.svg",
+    "text": "Судно, лишенное возможности управляться"
+  },
+  {
+    "id": 10,
+    "img": "https://visualpharm.com/assets/294/Battleship-595b40b75ba036ed117d558f.svg",
+    "text": "Буксир, длина связки суднов менее 200 м"
+  },
+  {
+    "id": 11,
+    "img": "https://visualpharm.com/assets/294/Battleship-595b40b75ba036ed117d558f.svg",
+    "text": "Судно длинной более 50 м на якоре"
+  },
+  {
+    "id": 12,
+    "img": "https://visualpharm.com/assets/294/Battleship-595b40b75ba036ed117d558f.svg",
+    "text": "Судно длинной до 50 м на якоре"
+  },
+  {
+    "id": 13,
+    "img": "https://visualpharm.com/assets/294/Battleship-595b40b75ba036ed117d558f.svg",
+    "text": "Лоцманское судно"
+  },
+  {
+    "id": 14,
+    "img": "https://visualpharm.com/assets/294/Battleship-595b40b75ba036ed117d558f.svg",
+    "text": "Судно на мели"
+  }
+]
+
 export const LightsSings = () => {
-  const [icons, setIcons] = useState<Type.Icon[]>(null)
   const [shipId, setShipId] = useState(1)
   const [currentShip, setCurrentShip] = useState(null)
-
-  useEffect(() => {
-    fetch('/data.json').then(r => r.json()).then(r => {setIcons(r.icons)})
-  }, [])
 
   useEffect(() => {
     setCurrentShip(ships.filter(s => s.id === shipId)[0])
