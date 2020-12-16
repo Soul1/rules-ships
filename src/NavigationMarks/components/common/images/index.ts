@@ -10,5 +10,6 @@ import saveWater from './saveWater.png'
 import special from './special.png'
 import ship from './ship.png'
 import backgroundLateral from './backgroundLateral.png'
+import backgroundCardinal from './backgroundCardinal.png'
 
-export {lateralRed, lateralGreen, northCardinal, eastCardinal, southCardinal, westCardinal, isolatedDanger, emergencyWreckMarking, saveWater, special, ship, backgroundLateral}
+export {lateralRed, lateralGreen, northCardinal, eastCardinal, southCardinal, westCardinal, isolatedDanger, emergencyWreckMarking, saveWater, special, ship, backgroundLateral, backgroundCardinal}

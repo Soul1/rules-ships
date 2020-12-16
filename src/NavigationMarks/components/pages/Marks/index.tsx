@@ -13,11 +13,10 @@ type Props = {
 export const Marks: Type.F<Props> = ({marks, ship,currentMark, onCurrentMark}) => {
   return (
     <div class='group has-text-centered'>
-      <div class='window' style={{backgroundImage: `url(${backgroundLateral})`}}>
+      <div class='window'>
         <div class='h50 w50'>
-          {/*<Circle color={currentMark.markColor} animate={currentMark.markAnimate}/>*/}
+          <Circle color={currentMark.markColor} animate={currentMark.markAnimate}/>
         </div>
-        <img class='animate-ship' src={ship} alt='ship'/>
       </div>
       <div class='marks'>
         {marks.map(mark => <Mark mark={mark} onCurrentMark={onCurrentMark}/>)}

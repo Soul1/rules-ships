@@ -545,67 +545,132 @@ $blue: #00f;
 @keyframes ship {
   0% {
     bottom: 0;
-    left: 200px;
+    left: 150px;
     transform: rotate(0deg);
   }
   10% {
     bottom: 50px;
-    left: 190px;
+    left: 140px;
     transform: rotate(-15deg);
   }
   20% {
     bottom: 100px;
-    left: 190px;
+    left: 135px;
     transform: rotate(-5deg);
   }
   30% {
     bottom: 150px;
-    left: 210px;
+    left: 160px;
     transform: rotate(0deg);
   }
   40% {
     bottom: 200px;
-    left: 210px;
+    left: 165px;
     transform: rotate(15deg);
   }
   50% {
     bottom: 220px;
-    left: 200px;
+    left: 153px;
     transform: rotate(90deg);
   }
-  57% {
+  53% {
+    bottom: 218px;
+    left: 250px;
+    transform: rotate(90deg);
+  }
+  55% {
+    bottom: 215px;
+    left: 350px;
+    transform: rotate(90deg);
+  }
+  58% {
+    bottom: 222px;
+    left: 450px;
+    transform: rotate(90deg);
+  }
+  59% {
     bottom: 220px;
-    left: 545px;
-    transform: rotate(150deg);
+    left: 500px;
+    transform: rotate(90deg);
   }
   60% {
     bottom: 220px;
-    left: 550px;
+    left: 500px;
+    transform: rotate(120deg);
+  }
+  62% {
+    bottom: 220px;
+    left: 505px;
+    transform: rotate(150deg);
+  }
+  64% {
+    bottom: 220px;
+    left: 504px;
     transform: rotate(180deg);
   }
   70% {
     bottom: 200px;
-    left: 560px;
-    transform: rotate(180deg);
+    left: 512px;
+    transform: rotate(185deg);
   }
   80% {
     bottom: 100px;
-    left: 550px;
+    left: 511px;
+    transform: rotate(180deg);
+  }
+  83% {
+    bottom: 50px;
+    left: 500px;
+    transform: rotate(175deg);
+  }
+  84% {
+    bottom: 0;
+    left: 490px;
     transform: rotate(180deg);
   }
   85% {
     bottom: 0;
-    left: 520px;
+    left: 490px;
+    transform: rotate(200deg);
+  }
+  86% {
+    bottom: 0;
+    left: 490px;
     transform: rotate(220deg);
+  }
+  87% {
+    bottom: 0;
+    left: 465px;
+    transform: rotate(250deg);
   }
   90% {
     bottom: 0;
-    left: 520px;
+    left: 420px;
     transform: rotate(270deg);
+  }
+  92% {
+    bottom: 0;
+    left: 350px;
+    transform: rotate(270deg);
+  }
+  93% {
+    bottom: 0;
+    left: 250px;
+    transform: rotate(270deg);
+  }
+  95% {
+    bottom: 0;
+    left: 150px;
+    transform: rotate(320deg);
+  }
+  97% {
+    bottom: 0;
+    left: 150px;
+    transform: rotate(350deg);
   }
   100% {
     bottom: 0;
-    left: 200px;
-    transform: rotate(320deg);
+    left: 150px;
+    transform: rotate(360deg);
   }
 }

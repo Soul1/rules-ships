@@ -3,7 +3,6 @@ import {FunctionalComponent} from 'preact'
 export type F<T> = FunctionalComponent<T>
 
 export type Mark = {
-  id: number
   markColor?: string
   markAnimate: string
   text: string
@@ -17,7 +16,7 @@ export type Info = {
   img: string
 }
 
-export type Page = 'InfoMarks' | 'CardinalInfo' | 'Marks'
+export type Page = 'InfoMarks' | 'Lateral' | 'Cardinal' | 'IsolatedDanger'| 'EmergencyWreckMarking'| 'SaveWater'|  'Special'
 
 export type Tab = {
   id: number

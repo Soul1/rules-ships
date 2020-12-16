@@ -1,46 +1,29 @@
 import {h} from 'preact'
 import {useState} from 'preact/hooks'
 import cn from 'classnames'
-import {Marks, InfoMarks, CardinalInfo} from '../pages'
-import * as Img from '../common/images'
+import {Pages} from '../pages'
 import * as Type from '../../types'
 import '../../animation/index.scss'
 import './index.scss'
 
-const marks: Type.Mark[][] = [
-  [{id: 1, markColor: 'red', markAnimate: 'lateral', text: 'lateral red', img: Img.lateralRed}, {id: 2, markColor: 'green', markAnimate: 'lateral', text: 'lateral green', img: Img.lateralGreen}],
-  [
-    {id: 3, markAnimate: 'northCardinal', text: 'north cardinal', img: Img.northCardinal}, {id: 4, markAnimate: 'eastCardinal', text: 'east cardinal', img: Img.eastCardinal},
-    {id: 5, markAnimate: 'southCardinal', text: 'south cardinal', img: Img.southCardinal}, {id: 6, markAnimate: 'westCardinal', text: 'west cardinal', img: Img.westCardinal}
-  ],
-  [{id: 7, markAnimate: 'isolatedDanger', text: 'isolated danger', img: Img.isolatedDanger}],
-  [{id: 8, markAnimate: 'emergencyWreckMarking', text: 'emergency wreck marking', img: Img.emergencyWreckMarking}],
-  [{id: 9, markAnimate: 'saveWater', text: 'save water', img: Img.saveWater}],
-  [{id: 10, markAnimate: 'special', text: 'special', img: Img.special}]
-]
 
 const tabs: Type.Tab[] = [
   {id: 1, title: 'Главная', page: 'InfoMarks'},
-  {id: 2, title: 'Кардинальные знаки', page: 'CardinalInfo'},
-  {id: 3, title: 'Знаки', page: 'Marks'}
+  {id: 2, title: 'Латеральные знаки', page: 'Lateral'},
+  {id: 3, title: 'Кардинальные знаки', page: 'Cardinal'},
+  {id: 4, title: 'Знаки изолированной опасности', page: 'IsolatedDanger'},
+  {id: 5, title: 'Аварийные знаки', page: 'EmergencyWreckMarking'},
+  {id: 6, title: 'Осевые знаки', page: 'SaveWater'},
+  {id: 7, title: 'Специальные знаки', page: 'Special'}
 ]
 
 export const NavigationMarks = () => {
-  const [currentMark, setCurrentMark] = useState<Type.Mark>({
-    id: 1,
-    markColor: 'red',
-    markAnimate: 'lateral',
-    text: 'lateral red',
-    img: Img.lateralRed})
-
   const [currentPage, setCurrentPage] = useState<Type.Page>('InfoMarks')
 
   return (
     <Centered>
       <Tabs tabs={tabs} onCurrentPage={setCurrentPage}/>
-      {currentPage === 'InfoMarks' && <InfoMarks />}
-      {currentPage === 'CardinalInfo' && <CardinalInfo />}
-      {currentPage === 'Marks' && <Marks marks={marks} ship={Img.ship} currentMark={currentMark} onCurrentMark={setCurrentMark}/>}
+      <Pages currentPage={currentPage}/>
     </Centered>
   )
 }

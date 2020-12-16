@@ -1,3 +1,20 @@
+$red: #f00;
+$green: #0f0;
+$white: #fff;
+$yellow: #ff0;
+$blue: #00f;
+
+@mixin animate {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@mixin whiteAnimate {
+  @include animate;
+  box-shadow: 0 0 35px 20px $white;
+  background-color: $white;
+}
+
 body {
   height: 100vh;
   background-color: #5c97a8;
@@ -10,18 +27,27 @@ body {
   margin: 0 auto;
 }
 
-.h50 {
-  height: 50px;
+.h10 {
+  height: 10px;
 }
 
-.w50 {
-  width: 50px;
+.w10 {
+  width: 10px;
 }
 
 .flex-align-center {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex {
+  display: flex;
 }
 
 .arrows {
@@ -33,4 +59,128 @@ body {
     cursor: pointer;
     margin: 0 25px;
   }
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.window {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  height: 300px;
+  color: #fff;
+  border: 5px solid #4a4a4a;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.marks {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+//.mark {
+//  cursor: pointer;
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//}
+
+.circle {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin: auto;
+
+  &.red {
+    background-color: $red;
+  }
+
+  &.green {
+    background-color: $green;
+  }
+}
+
+.lateral {
+  animation-name: lateralSigns;
+  animation-duration: 2s;
+  @include animate;
+
+  &:not(.red) {
+    box-shadow: 0 0 35px 20px $green;
+  }
+
+  &:not(.green) {
+    box-shadow: 0 0 35px 20px $red;
+  }
+}
+
+.special {
+  animation-name: special;
+  animation-duration: 6s;
+  @include animate;
+  box-shadow: 0 0 35px 20px $yellow;
+  background-color: $yellow;
+}
+
+.emergencyWreckMarking {
+  animation-name: emergencyWreckMarking;
+  animation-duration: 3.5s;
+  @include animate;
+  box-shadow: 0 0 35px 20px $blue;
+}
+
+.saveWater {
+  animation-name: saveWater;
+  animation-duration: 4s;
+  @include whiteAnimate;
+}
+
+.isolatedDanger {
+  animation-name: isolatedDanger;
+  animation-duration: 4s;
+  @include whiteAnimate;
+}
+
+.northCardinal {
+  animation-name: northCardinal;
+  animation-duration: 1.5s;
+  @include whiteAnimate;
+}
+
+.eastCardinal {
+  animation-name: eastCardinal;
+  animation-duration: 5s;
+  @include whiteAnimate;
+}
+
+.southCardinal {
+  animation-name: southCardinal;
+  animation-duration: 10s;
+  @include whiteAnimate;
+}
+
+.westCardinal {
+  animation-name: westCardinal;
+  animation-duration: 13s;
+  @include whiteAnimate;
+}
+
+.animate-mark {
+  animation-name: animateMark;
+  animation-duration: 1.5s;
+  @include animate;
+}
+
+.animate-ship {
+  animation-name: ship;
+  animation-duration: 15s;
+  position: absolute;
+  @include animate;
 }
