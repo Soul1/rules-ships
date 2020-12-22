@@ -2,6 +2,10 @@ import changeCourseRight from './changeCourseRight.mp3'
 import changeCourseLeft from './changeCourseLeft.mp3'
 import motorsWorkingReverse from './motorsWorkingReverse.mp3'
 import no from './no.mp3'
+import overtakeYouStarboardSide from './overtakeYouStarboardSide.mp3'
+import overtakeYouPortSide from './overtakeYouPortSide.mp3'
+import yes from './yes.mp3'
+import approachingBlindBend from './approachingBlindBend.mp3'
 import motorBoatUnderwayHavingSpeedOverWater from './motorBoatUnderwayHavingSpeedOverWater.mp3'
 import motorBoatUnderwayNoHavingSpeedOverWater from './motorBoatUnderwayNoHavingSpeedOverWater.mp3'
 import limitedAbilityManeuver from './limitedAbilityManeuver.mp3'
@@ -17,6 +21,7 @@ import youHeadingDanger from './youHeadingDanger.mp3'
 import sos from './sos.mp3'
 
 export {changeCourseRight, changeCourseLeft, motorsWorkingReverse, no,
+  yes, approachingBlindBend, overtakeYouPortSide, overtakeYouStarboardSide,
   vessel100MAtAnchor, vessel100MOverAground, vessel100MOverAnchor, vessel100MAtAground,
   motorBoatUnderwayHavingSpeedOverWater, motorBoatUnderwayNoHavingSpeedOverWater,
   collisionWarningFromVesselAtAnchor, pilotShipOnDuty, lastVesselTowed, limitedAbilityManeuver,

@@ -11,7 +11,12 @@ const data = [
       {id: 1, sound: Sounds.changeCourseRight, text: 'Я изменяю свой курс вправо'},
       {id: 2, sound: Sounds.changeCourseLeft, text: 'Я изменяю свой курс влево'},
       {id: 3, sound: Sounds.motorsWorkingReverse, text: 'Мои движетали работают на задний ход'},
-      {id: 4, sound: Sounds.no, text: 'Нет, не согласен, не понимаю ваших намерений'}
+      {id: 4, sound: Sounds.no, text: 'Нет, не согласен, не понимаю ваших намерений'},
+      {id: 5, sound: Sounds.overtakeYouStarboardSide, text: 'Я намереваюсь обогнать вас по вашему правому борту'},
+      {id: 6, sound: Sounds.overtakeYouPortSide, text: 'Я намереваюсь обогнать вас по вашему левому борту'},
+      {id: 7, sound: Sounds.yes, text: 'Да, согласен'},
+      {id: 8, sound: Sounds.approachingBlindBend, text: 'Предупреждение о приближении к "слепому" изгибу'},
+      {id: 9, sound: Sounds.approachingBlindBend, text: 'Ответ на предупреждение о приближении к "слепому" изгибу'},
     ]
   },
   {
