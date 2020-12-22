@@ -3,6 +3,7 @@ import {useState} from 'preact/hooks'
 import cn from 'classnames'
 import {NavigationMarks} from './NavigationMarks'
 import {LightsSings} from './LightsSigns'
+import {SoundSignals} from './SoundSignals'
 import * as Type from './types'
 import './index.scss'
 
@@ -14,7 +15,7 @@ const menu: Type.Menu[] = [
 ]
 
 export const App = () => {
-  const [currentPage, setCurrentPage] = useState('Main')
+  const [currentPage, setCurrentPage] = useState('SoundSignals')
 
   const page = () => {
     switch (currentPage) {
@@ -28,7 +29,7 @@ export const App = () => {
         return <LightsSings/>
       }
       case 'SoundSignals': {
-        return <div>Пока не готово</div>
+        return <SoundSignals/>
       }
       default: {
         return <div>404 NOT FOUND</div>
@@ -50,7 +51,7 @@ type MenuProps = {
 }
 
 const Menu: Type.F<MenuProps> = ({menu, onCurrentPage}) => {
-  const [isActive, setIsActive] = useState(true)
+  const [isActive, setIsActive] = useState(false)
   const [listId, setListId] = useState(1)
 
   const setPageAndListIdAndHideMenu = (page: Type.Page, id: number) => {
@@ -60,7 +61,7 @@ const Menu: Type.F<MenuProps> = ({menu, onCurrentPage}) => {
   }
 
   return (
-    <Fragment>
+    <div class='centered'>
       <BurgMenu isActive={isActive} onIsActive={setIsActive}/>
       <div class={cn('menu has-text-centered pt-5', {'hide': !isActive})}>
         <ul class='menu-list'>
@@ -68,7 +69,7 @@ const Menu: Type.F<MenuProps> = ({menu, onCurrentPage}) => {
             <li class={cn('pb-4', {'is-active': id === listId})} onClick={() => setPageAndListIdAndHideMenu(page, id)}><a>{title}</a></li>)}
         </ul>
       </div>
-    </Fragment>
+    </div>
   )
 }
 
